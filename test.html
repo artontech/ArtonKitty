@@ -1,0 +1,16 @@
+<html>
+    <header>
+        <title>Kitty</title>
+        <script type="application/javascript" src="kitty.js"></script>
+    </header>
+    <body>
+        <script type="application/javascript">
+            const world = new KittyWorld();
+            const tick = (timestamp) => {
+                world.tick(timestamp);
+                window.requestAnimationFrame(tick);
+            };
+            window.requestAnimationFrame(tick);
+        </script>
+    </body>
+</html>
